@@ -108,10 +108,7 @@ private  Button resetBtn;
 
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
+
 
 }
 
