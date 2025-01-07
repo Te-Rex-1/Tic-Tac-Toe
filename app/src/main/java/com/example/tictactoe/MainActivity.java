@@ -69,6 +69,7 @@ private  Button resetBtn;
                 // Update the status bar for winner announcement
                 TextView status = findViewById(R.id.status);
                 status.setText(winnerStr);
+                resetBtn.setText("Play Again ");
 
             }
 
