@@ -3,6 +3,7 @@ package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     // Player representation
     // 0 - X
     // 1 - O
-    int activePlayer = 0;
+    int activePlayer ;
     int[] gameState = {2, 2 , 2, 2, 2, 2, 2, 2, 2};
     //    State meanings:
     //    0 - X
@@ -69,6 +70,7 @@ private  Button resetBtn;
                 // Update the status bar for winner announcement
                 TextView status = findViewById(R.id.status);
                 status.setText(winnerStr);
+                resetBtn.setText("Play Again ");
 
             }
 
@@ -105,9 +107,10 @@ private  Button resetBtn;
 
         setContentView(R.layout.activity_main);
         resetBtn=findViewById(R.id.btnReset);
+        Intent intent=getIntent();
+        activePlayer=intent.getIntExtra("activePlayer",-1);
 
     }
-
 
 
 }
