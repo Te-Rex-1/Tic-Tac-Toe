@@ -12,9 +12,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     boolean gameActive = true;
     boolean setVisible=false;
-
-    int scoreX=0;
-    int scoreY=0;
     // Player representation
     // 0 - X
     // 1 - O
@@ -30,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
 //    Button resetBtn=findViewById(R.id.btnReset);
 
 private  Button resetBtn;
-private  TextView X;
-private  TextView Y;
     public void playerTap(View view){
         ImageView img = (ImageView) view;
         int tappedImage = Integer.parseInt(img.getTag().toString());
@@ -67,14 +62,9 @@ private  TextView Y;
                 gameActive = false;
                 if(gameState[winPosition[0]] == 0){
                     winnerStr = "X has won";
-                    scoreX++;
-                    X.setText(scoreX);
-
                 }
                 else{
                     winnerStr = "O has won";
-                    scoreY++;
-                    Y.setText(scoreY);
                 }
                 // Update the status bar for winner announcement
                 TextView status = findViewById(R.id.status);
@@ -116,9 +106,6 @@ private  TextView Y;
 
         setContentView(R.layout.activity_main);
         resetBtn=findViewById(R.id.btnReset);
-        TextView X=findViewById(R.id.tvX);
-        TextView Y=findViewById(R.id.tvY);
-
 
     }
 
