@@ -1,12 +1,1 @@
-<resources>
-    <string name="app_name">TicTacToe</string>
-    <string name="heading">Tic Tac Toe</string>
-    <string name="grid">Our main grid</string>
-    <string name="status">State\n</string>
-    <string name="reset">Reset</string>
-    <string name="xScore">X</string>
-    <string name="yScore">Y</string>
-    <string name="choiceHead">TIC-TAC-TOE</string>
-    <string name="choice">Pick who goes first?</string>
-
-</resources>
+<resources>    <string name="app_name">TicTacToe</string>    <string name="heading">Tic Tac Toe</string>    <string name="grid">Our main grid</string>    <string name="status">State\n</string>    <string name="reset">Reset</string>    <string name="xScore">X</string>    <string name="yScore">Y</string>    <string name="choiceHead">TIC-TAC-TOE</string>    <string name="choice">Pick who goes first?</string></resources>
