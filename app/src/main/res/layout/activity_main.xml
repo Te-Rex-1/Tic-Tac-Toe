@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#34A7BF"
+    android:backgroundTint="#34A7BF"
     tools:context=".MainActivity">
 
     <TextView
@@ -160,9 +162,9 @@
         android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="gameReset"
         android:text="@string/reset"
         android:visibility="invisible"
-        android:onClick="gameReset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
