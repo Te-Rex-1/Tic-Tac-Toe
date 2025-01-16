@@ -4,7 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CD3535"
+    android:backgroundTint="#D82A9FB8"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:orientation="vertical"
+        android:paddingTop="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922">
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -21,8 +38,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="401dp"
-        android:layout_height="510dp"
+        android:layout_width="413dp"
+        android:layout_height="528dp"
         android:contentDescription="@string/grid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -160,12 +177,39 @@
         android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="gameReset"
         android:text="@string/reset"
         android:visibility="invisible"
-        android:onClick="gameReset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <LinearLayout
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:orientation="vertical"
+        android:paddingTop="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922">
+
+        <TextView
+            android:id="@+id/tvScoreY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/xScore" />
+
+        <TextView
+            android:id="@+id/tvScoreYresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

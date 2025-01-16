@@ -3,6 +3,7 @@ package com.example.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     // Player representation
     // 0 - X
     // 1 - O
-    int activePlayer = 0;
+    int activePlayer;
+
     int[] gameState = {2, 2 , 2, 2, 2, 2, 2, 2, 2};
     //    State meanings:
     //    0 - X
@@ -24,14 +26,12 @@ public class MainActivity extends AppCompatActivity {
     int[][] winPositions = {{0,1,2}, {3,4,5}, {6,7,8},
             {0,3,6}, {1,4,7}, {2,5,8},
             {0,4,8}, {2,4,6}};
-//    Button resetBtn=findViewById(R.id.btnReset);
 
 private  Button resetBtn;
     public void playerTap(View view){
         ImageView img = (ImageView) view;
         int tappedImage = Integer.parseInt(img.getTag().toString());
         resetBtn.setVisibility(View.VISIBLE);
-
 
         if(!gameActive){
             gameReset(view);
@@ -106,13 +106,14 @@ private  Button resetBtn;
 
         setContentView(R.layout.activity_main);
         resetBtn=findViewById(R.id.btnReset);
+        Intent intent=getIntent();
+        activePlayer=intent.getIntExtra("activePlayer",1);
+
+
 
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
+
 
 }
 
